@@ -1,0 +1,64 @@
+@import "variables";
+
+.footer {
+  background-color: $color-dark;
+  color: #fff;
+  border-top: 4px solid $color-primary;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: rgba(#fff, 0.7);
+  }
+
+  &__heading {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(#fff, 0.5);
+    margin-bottom: 1rem;
+  }
+
+  &__address {
+    font-size: 0.9rem;
+    color: rgba(#fff, 0.7);
+    font-style: normal;
+
+    a {
+      color: rgba(#fff, 0.7);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      font-size: 0.9rem;
+      color: rgba(#fff, 0.7);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba(#fff, 0.1);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(#fff, 0.4);
+  }
+}

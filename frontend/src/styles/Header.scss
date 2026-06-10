@@ -1,0 +1,41 @@
+@import "variables";
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 1000;
+
+  .navbar-brand img {
+    height: 50px;
+  }
+
+  .nav-link {
+    color: $color-text;
+    font-weight: 500;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  .form-control {
+    border-radius: 50px;
+    border-color: #ddd;
+
+    &:focus {
+      border-color: $color-primary;
+      box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.2);
+    }
+  }
+
+  .btn-primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    border-radius: 50px;
+
+    &:hover {
+      background-color: $color-dark;
+      border-color: $color-dark;
+    }
+  }
+}
