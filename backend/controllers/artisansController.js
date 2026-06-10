@@ -22,8 +22,10 @@ const getByCategorie = async (req, res) => {
     const artisans = await Artisan.findAll({
       include: {
         model: Specialite,
+        required: true,
         include: {
           model: Categorie,
+          required: true,
           where: { id: req.params.id },
         },
       },
