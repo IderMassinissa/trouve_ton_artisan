@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Graphik', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#0074c7',
+                            dark: '#00497c',
+                            text: '#384050',
+                            bg: '#f1f8fc',
+                            accent: '#cd2c2e',
+                            success: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="m-0 p-0 text-brand-text bg-white">
+
+    <!-- Header (Sticky) -->
+    <header id="header" class="sticky top-0 z-50 bg-white border-b border-gray-200">
+        <div class="bg-brand-dark text-white text-xs py-1.5 px-4 text-center font-medium">
+            Soutenu par la région Auvergne-Rhône-Alpes
+        </div>
+        <div class="px-4 py-3">
+            <div class="flex items-center justify-between mb-3">
+                <div class="flex flex-col">
+                    <span class="text-brand-light font-bold text-xl leading-tight tracking-tight">Trouve ton artisan !</span>
+                    <span class="text-xs text-gray-500 font-medium mt-0.5">Avec la région Auvergne-Rhône-Alpes</span>
+                </div>
+                <button class="text-brand-dark hover:text-brand-light p-2 -mr-2" aria-label="Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div class="relative">
+                <input type="text" placeholder="Rechercher un métier, un artisan..." class="w-full bg-gray-100 border-none rounded-full py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-brand-light focus:bg-white outline-none transition-colors" aria-label="Recherche">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-500 text-sm"></i>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="bg-brand-bg px-4 py-8 border-b border-gray-200 relative overflow-hidden">
+            <div class="relative z-10">
+                <h1 class="text-2xl font-bold text-brand-dark mb-3 leading-snug">
+                    Trouvez l'artisan idéal près de chez vous en Auvergne-Rhône-Alpes.
+                </h1>
+                <p class="text-brand-text text-base leading-relaxed">
+                    Découvrez des savoir-faire authentiques et locaux. Notre plateforme régionale vous connecte directement avec les meilleurs professionnels de l'artisanat de notre territoire.
+                </p>
+            </div>
+        </section>
+
+        <!-- Categories Pill Menu -->
+        <section id="categories" class="py-5 px-4 border-b border-gray-100">
+            <h2 class="sr-only">Catégories d'artisanat</h2>
+            <div class="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4">
+                <button class="bg-brand-dark text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap shadow-sm">Tous les métiers</button>
+                <button class="bg-gray-100 text-brand-text px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:bg-gray-200">Bâtiment</button>
+                <button class="bg-gray-100 text-brand-text px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:bg-gray-200">Services</button>
+                <button class="bg-gray-100 text-brand-text px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:bg-gray-200">Fabrication</button>
+                <button class="bg-gray-100 text-brand-text px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap hover:bg-gray-200">Alimentation</button>
+            </div>
+        </section>
+
+        <!-- How it works Section -->
+        <section id="how-it-works" class="py-10 px-4">
+            <h2 class="text-xl font-bold text-brand-dark mb-6 text-center">Comment trouver mon artisan ?</h2>
+            <div class="space-y-6 relative before:absolute before:inset-0 before:ml-[1.125rem] before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-brand-light/20 before:via-brand-light/20 before:to-transparent">
+
+                <!-- Step 1 -->
+                <div class="relative flex items-start gap-4">
+                    <div class="absolute left-0 h-9 w-9 rounded-full bg-brand-light flex items-center justify-center ring-4 ring-white z-10 text-white font-bold text-sm flex-shrink-0">
+                        1
+                    </div>
+                    <div class="pl-12 pt-1.5 pb-2">
+                        <h3 class="font-semibold text-brand-dark text-base">Choisir la catégorie</h3>
+                        <p class="text-sm text-gray-600 mt-1">Choisir la catégorie d'artisanat dans le menu.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex items-start gap-4">
+                    <div class="absolute left-0 h-9 w-9 rounded-full bg-brand-light flex items-center justify-center ring-4 ring-white z-10 text-white font-bold text-sm flex-shrink-0">
+                        2
+                    </div>
+                    <div class="pl-12 pt-1.5 pb-2">
+                        <h3 class="font-semibold text-brand-dark text-base">Choisir un artisan</h3>
+                        <p class="text-sm text-gray-600 mt-1">Choisir un artisan.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex items-start gap-4">
+                    <div class="absolute left-0 h-9 w-9 rounded-full bg-brand-light flex items-center justify-center ring-4 ring-white z-10 text-white font-bold text-sm flex-shrink-0">
+                        3
+                    </div>
+                    <div class="pl-12 pt-1.5 pb-2">
+                        <h3 class="font-semibold text-brand-dark text-base">Le contacter</h3>
+                        <p class="text-sm text-gray-600 mt-1">Le contacter via le formulaire de contact.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative flex items-start gap-4">
+                    <div class="absolute left-0 h-9 w-9 rounded-full bg-brand-light flex items-center justify-center ring-4 ring-white z-10 text-white font-bold text-sm flex-shrink-0">
+                        4
+                    </div>
+                    <div class="pl-12 pt-1.5 pb-2">
+                        <h3 class="font-semibold text-brand-dark text-base">Une réponse sous 48h</h3>
+                        <p class="text-sm text-gray-600 mt-1">Une réponse sera apportée sous 48h.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Artisans of the month -->
+        <section id="artisans-month" class="py-10 px-4 bg-gray-50 border-t border-gray-200">
+            <div class="flex justify-between items-end mb-6">
+                <h2 class="text-xl font-bold text-brand-dark">Artisans du mois</h2>
+                <a href="#" class="text-sm text-brand-light font-medium hover:underline">Voir tous</a>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark">Menuiserie Dubois</h3>
+                        <div class="flex items-center bg-gray-50 px-2 py-1 rounded text-sm">
+                            <i class="fa-solid fa-star text-yellow-400 text-xs mr-1"></i>
+                            <span class="font-medium">4.9</span>
+                            <span class="text-gray-400 text-xs ml-1">(24)</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-brand-light font-medium mb-1">Ébéniste / Menuisier</div>
+                    <div class="flex items-center text-gray-500 text-xs mb-4">
+                        <i class="fa-solid fa-location-dot mr-1.5"></i> Lyon 6ème, Rhône (69)
+                    </div>
+                    <button class="w-full bg-brand-bg text-brand-dark font-medium py-2 rounded-lg border border-brand-light/20 hover:bg-brand-light hover:text-white transition-colors">
+                        Voir le profil
+                    </button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark">Atelier Céramique Roux</h3>
+                        <div class="flex items-center bg-gray-50 px-2 py-1 rounded text-sm">
+                            <i class="fa-solid fa-star text-yellow-400 text-xs mr-1"></i>
+                            <span class="font-medium">5.0</span>
+                            <span class="text-gray-400 text-xs ml-1">(12)</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-brand-light font-medium mb-1">Céramiste / Potier</div>
+                    <div class="flex items-center text-gray-500 text-xs mb-4">
+                        <i class="fa-solid fa-location-dot mr-1.5"></i> Annecy, Haute-Savoie (74)
+                    </div>
+                    <button class="w-full bg-brand-bg text-brand-dark font-medium py-2 rounded-lg border border-brand-light/20 hover:bg-brand-light hover:text-white transition-colors">
+                        Voir le profil
+                    </button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-bold text-lg text-brand-dark">Boulangerie Les Blés d'Or</h3>
+                        <div class="flex items-center bg-gray-50 px-2 py-1 rounded text-sm">
+                            <i class="fa-solid fa-star text-yellow-400 text-xs mr-1"></i>
+                            <span class="font-medium">4.8</span>
+                            <span class="text-gray-400 text-xs ml-1">(56)</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-brand-light font-medium mb-1">Boulanger Artisanal</div>
+                    <div class="flex items-center text-gray-500 text-xs mb-4">
+                        <i class="fa-solid fa-location-dot mr-1.5"></i> Clermont-Ferrand, Puy-de-Dôme (63)
+                    </div>
+                    <button class="w-full bg-brand-bg text-brand-dark font-medium py-2 rounded-lg border border-brand-light/20 hover:bg-brand-light hover:text-white transition-colors">
+                        Voir le profil
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-brand-dark text-white pt-10 pb-8 px-4 border-t-4 border-brand-light">
+        <div class="mb-8">
+            <h2 class="text-xl font-bold mb-1">Trouve ton artisan !</h2>
+            <p class="text-sm text-gray-300">Plateforme officielle de la région Auvergne-Rhône-Alpes pour la promotion de l'artisanat local.</p>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-sm uppercase tracking-wider font-semibold text-gray-400 mb-4">Contact</h3>
+            <address class="not-italic text-sm text-gray-300 space-y-2">
+                <p class="flex items-start">
+                    <i class="fa-solid fa-location-dot mt-1 w-5 text-center mr-2 text-brand-light"></i>
+                    <span>101 cours Charlemagne, CS 20033<br>69269 LYON CEDEX 02, France</span>
+                </p>
+                <p class="flex items-center">
+                    <i class="fa-solid fa-phone w-5 text-center mr-2 text-brand-light"></i>
+                    <a href="tel:+33426734000" class="hover:text-white">+33 (0)4 26 73 40 00</a>
+                </p>
+            </address>
+        </div>
+
+        <div class="mb-8">
+            <h3 class="text-sm uppercase tracking-wider font-semibold text-gray-400 mb-4">Informations légales</h3>
+            <ul class="space-y-3 text-sm text-gray-300">
+                <li><a href="#" class="hover:text-white hover:underline underline-offset-2">Mentions légales</a></li>
+                <li><a href="#" class="hover:text-white hover:underline underline-offset-2">Données personnelles</a></li>
+                <li><a href="#" class="hover:text-white hover:underline underline-offset-2">Accessibilité : partiellement conforme</a></li>
+                <li><a href="#" class="hover:text-white hover:underline underline-offset-2">Gestion des cookies</a></li>
+            </ul>
+        </div>
+
+        <div class="pt-6 border-t border-gray-700/50 text-center text-xs text-gray-400 flex flex-col items-center justify-center">
+            <span class="mb-2">© 2024 Région Auvergne-Rhône-Alpes</span>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Artisan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            primary: '#0074c7',
+                            dark: '#00497c',
+                            text: '#384050',
+                            light: '#f1f8fc',
+                            red: '#cd2c2e',
+                            green: '#82b864',
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; padding: 0; background-color: #fafbfd; color: #384050; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header id="header" class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-[1280px] mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-hammer text-xl"></i>
+                </div>
+                <span class="text-2xl font-bold text-brand-dark tracking-tight">Trouve ton artisan !</span>
+            </div>
+            
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-brand-text">
+                <a href="#" class="hover:text-brand-primary transition-colors">Accueil</a>
+                <a href="#" class="hover:text-brand-primary transition-colors text-brand-primary">Trouver un artisan</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Comment ça marche</a>
+                <a href="#" class="hover:text-brand-primary transition-colors">Avis</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button class="hidden md:block text-brand-primary font-medium hover:text-brand-dark transition-colors px-4 py-2">
+                    Connexion
+                </button>
+                <button class="bg-brand-primary hover:bg-brand-dark text-white font-medium px-6 py-2.5 rounded-lg transition-colors shadow-soft">
+                    Espace Pro
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow max-w-[1280px] w-full mx-auto px-6 py-12">
+        
+        <!-- Breadcrumb -->
+        <nav class="flex text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                <li class="inline-flex items-center">
+                    <a href="#" class="hover:text-brand-primary"><i class="fa-solid fa-house mr-2"></i>Accueil</a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-chevron-right text-xs mx-2"></i>
+                        <a href="#" class="hover:text-brand-primary">Menuiserie</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-chevron-right text-xs mx-2"></i>
+                        <span class="text-brand-text font-medium">Atelier Dubois</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left Column (60%) -->
+            <div id="artisan-details" class="lg:col-span-7 xl:col-span-7 flex flex-col gap-8">
+                
+                <!-- Hero Image -->
+                <div class="w-full h-[350px] rounded-2xl overflow-hidden shadow-soft relative group">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_bb147dd482_5b6fce7c4a20c856.png" alt="professional carpenter working with wood in a clean modern workshop" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-4">
+                        <button class="bg-white/90 backdrop-blur-sm text-brand-dark px-4 py-2 rounded-lg font-medium text-sm hover:bg-white transition-colors">
+                            <i class="fa-solid fa-images mr-2"></i>Voir la galerie
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Header Info -->
+                <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100">
+                    <div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-brand-light text-brand-primary px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                                    Menuisier Agenceur
+                                </span>
+                                <span class="flex items-center text-brand-green text-sm font-medium">
+                                    <i class="fa-solid fa-circle-check mr-1.5"></i> Profil vérifié
+                                </span>
+                            </div>
+                            <h1 class="text-3xl lg:text-4xl font-bold text-brand-dark mb-3">Atelier Dubois</h1>
+                            
+                            <!-- Rating -->
+                            <div class="flex items-center gap-2 mb-6">
+                                <div class="flex text-yellow-400 text-lg">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <span class="font-bold text-brand-text">5.0</span>
+                                <span class="text-gray-500 text-sm underline cursor-pointer hover:text-brand-primary">(42 avis)</span>
+                            </div>
+
+                            <!-- Meta info -->
+                            <div class="flex flex-col gap-3 text-brand-text">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <span>15 Rue des Artisans, 69002 Lyon, France</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400">
+                                        <i class="fa-solid fa-globe"></i>
+                                    </div>
+                                    <a href="#" class="text-brand-primary hover:underline font-medium">www.atelier-dubois.fr</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Logo/Avatar placeholder -->
+                        <div class="w-24 h-24 rounded-2xl bg-brand-light flex items-center justify-center border-2 border-white shadow-sm flex-shrink-0">
+                            <span class="text-3xl font-bold text-brand-primary">AD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100">
+                    <h2 class="text-2xl font-bold text-brand-dark mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-user text-brand-primary"></i> À propos
+                    </h2>
+                    <div class="prose max-w-none text-brand-text leading-relaxed">
+                        <p class="mb-4">
+                            Fort de plus de 15 ans d'expérience, l'Atelier Dubois est spécialisé dans la conception, la fabrication et la pose de menuiseries sur mesure. Nous accompagnons nos clients, particuliers et professionnels, dans tous leurs projets d'aménagement intérieur et extérieur.
+                        </p>
+                        <p class="mb-4">
+                            Notre passion pour le travail du bois s'exprime à travers la réalisation de dressings, bibliothèques, cuisines équipées, escaliers et verrières. Nous sélectionnons rigoureusement nos essences de bois pour garantir des ouvrages durables et esthétiques, tout en respectant l'environnement.
+                        </p>
+                        <p>
+                            Chaque projet fait l'objet d'une étude personnalisée pour répondre parfaitement à vos attentes et s'intégrer harmonieusement à votre espace de vie.
+                        </p>
+                    </div>
+
+                    <!-- Skills Tags -->
+                    <div class="mt-8 pt-6 border-t border-gray-100">
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Compétences clés</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-4 py-2 bg-gray-50 text-brand-text rounded-lg text-sm font-medium border border-gray-100">Sur-mesure</span>
+                            <span class="px-4 py-2 bg-gray-50 text-brand-text rounded-lg text-sm font-medium border border-gray-100">Aménagement intérieur</span>
+                            <span class="px-4 py-2 bg-gray-50 text-brand-text rounded-lg text-sm font-medium border border-gray-100">Cuisines</span>
+                            <span class="px-4 py-2 bg-gray-50 text-brand-text rounded-lg text-sm font-medium border border-gray-100">Dressings</span>
+                            <span class="px-4 py-2 bg-gray-50 text-brand-text rounded-lg text-sm font-medium border border-gray-100">Rénovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column (40%) - Sticky Contact Form -->
+            <div class="lg:col-span-5 xl:col-span-5 sticky top-28">
+                <div class="bg-white rounded-2xl shadow-card p-8 border border-gray-100 relative overflow-hidden">
+                    <!-- Top decorative bar -->
+                    <div class="absolute top-0 left-0 w-full h-1.5 bg-brand-primary"></div>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-brand-dark mb-2">Contacter cet artisan</h3>
+                        <p class="text-gray-500 text-sm">Remplissez ce formulaire pour obtenir un devis ou poser une question. Réponse généralement sous 24h.</p>
+                    </div>
+
+                    <form action="#" method="POST" class="space-y-5">
+                        <!-- Nom -->
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-brand-text mb-1.5">Nom complet <span class="text-brand-red">*</span></label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-regular fa-user text-gray-400"></i>
+                                </div>
+                                <input type="text" id="name" name="name" required
+                                    class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all text-brand-text placeholder-gray-400"
+                                    placeholder="Jean Dupont">
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-brand-text mb-1.5">Adresse email <span class="text-brand-red">*</span></label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-regular fa-envelope text-gray-400"></i>
+                                </div>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all text-brand-text placeholder-gray-400"
+                                    placeholder="jean.dupont@email.com">
+                            </div>
+                        </div>
+
+                        <!-- Objet -->
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-brand-text mb-1.5">Objet de la demande <span class="text-brand-red">*</span></label>
+                            <div class="relative">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i class="fa-regular fa-folder text-gray-400"></i>
+                                </div>
+                                <input type="text" id="subject" name="subject" required
+                                    class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all text-brand-text placeholder-gray-400"
+                                    placeholder="Demande de devis pour dressing">
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-brand-text mb-1.5">Votre message <span class="text-brand-red">*</span></label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full p-4 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brand-primary/20 focus:border-brand-primary transition-all text-brand-text placeholder-gray-400 resize-none"
+                                placeholder="Décrivez votre projet en détail..."></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-brand-primary hover:bg-brand-dark text-white font-semibold py-4 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-2 group">
+                            Envoyer le message
+                            <i class="fa-solid fa-paper-plane text-sm group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </button>
+                        
+                        <p class="text-xs text-center text-gray-400 mt-4">
+                            En envoyant ce message, vous acceptez nos <a href="#" class="underline hover:text-brand-primary">Conditions Générales d'Utilisation</a>.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Guarantee Box -->
+                <div class="mt-6 flex items-start gap-4 p-5 bg-brand-light rounded-xl border border-brand-primary/10">
+                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-primary flex-shrink-0 shadow-sm">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-brand-dark text-sm mb-1">Garantie Trouve ton artisan !</h4>
+                        <p class="text-xs text-brand-text leading-relaxed">Les artisans de notre réseau sont vérifiés. Assurances décennales et qualifications contrôlées par nos équipes.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-brand-dark text-white mt-auto">
+        <div class="max-w-[1280px] mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Brand col -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-brand-primary">
+                            <i class="fa-solid fa-hammer text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight">Trouve ton artisan !</span>
+                    </div>
+                    <p class="text-brand-light/80 text-sm leading-relaxed mb-6">
+                        La plateforme de référence pour trouver les meilleurs artisans qualifiés près de chez vous pour tous vos projets de construction et rénovation.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-primary transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-primary transition-colors">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-primary transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Trouver un pro</h4>
+                    <ul class="space-y-4 text-brand-light/80 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Menuisiers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Plombiers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Électriciens</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Peintres</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Maçons</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Informations</h4>
+                    <ul class="space-y-4 text-brand-light/80 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Comment ça marche ?</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Guides et conseils</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tarifs moyens</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Charte qualité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Espace Pro</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Nous contacter</h4>
+                    <ul class="space-y-4 text-brand-light/80 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-primary"></i>
+                            <span>123 Avenue des Champs-Élysées<br>75008 Paris, France</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-primary"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-primary"></i>
+                            <span>contact@trouvetonartisan.fr</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-brand-light/60">
+                <p>&copy; 2023 Trouve ton artisan !. Tous droits réservés.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de confidentialité</a>
+                    <a href="#" class="hover:text-white transition-colors">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

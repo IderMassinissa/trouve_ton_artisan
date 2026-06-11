@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page non trouvée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Graphik', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f1f8fc',
+                            DEFAULT: '#0074c7',
+                            dark: '#00497c',
+                            text: '#384050',
+                            error: '#cd2c2e',
+                            success: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Graphik', 'Inter', sans-serif; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white text-brand-text flex flex-col min-h-screen m-0 p-0 antialiased">
+
+    <!-- Sticky Header -->
+    <header id="header" class="sticky top-0 z-50 bg-white border-b border-gray-200 w-full">
+        <div class="px-4 py-3 flex justify-between items-center max-w-md mx-auto w-full">
+            <a href="#" class="flex items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-brand rounded-md p-1">
+                <div class="w-8 h-8 bg-brand text-white flex items-center justify-center rounded-lg font-bold text-lg shadow-sm group-hover:bg-brand-dark transition-colors">
+                    T
+                </div>
+                <span class="font-bold text-base text-brand-dark tracking-tight leading-tight">Trouve ton artisan&nbsp;!</span>
+            </a>
+            <button class="w-11 h-11 flex items-center justify-center text-brand-text hover:bg-gray-50 rounded-full focus:outline-none focus:ring-2 focus:ring-brand transition-colors" aria-label="Menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area - Centered -->
+    <main id="main-content" class="flex-grow flex flex-col justify-center items-center px-6 py-12 w-full max-w-md mx-auto text-center relative overflow-hidden">
+        
+        <!-- Decorative background element -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-30 flex items-center justify-center">
+            <div class="w-72 h-72 bg-brand-light rounded-full blur-3xl mix-blend-multiply"></div>
+        </div>
+
+        <div class="relative z-10 w-full flex flex-col items-center">
+            <!-- Illustration -->
+            <div class="w-48 h-48 sm:w-56 sm:h-56 mb-8 relative">
+                <img class="w-full h-full object-contain drop-shadow-xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0f89666c34_7b244a81c1cc1873.png" alt="illustration artisan perdu avec outil cassé" />
+            </div>
+
+            <!-- 404 Number -->
+            <h1 class="text-7xl sm:text-8xl font-black text-brand tracking-tighter mb-2 leading-none">
+                404
+            </h1>
+
+            <!-- Error Message -->
+            <h2 class="text-2xl sm:text-3xl font-bold text-brand-dark mb-4">
+                Page non trouvée
+            </h2>
+
+            <!-- Explanation -->
+            <p class="text-base text-brand-text/80 mb-8 max-w-xs leading-relaxed">
+                La page que vous avez demandée n'existe pas ou a été déplacée.
+            </p>
+
+            <!-- Action Button -->
+            <a href="#" class="inline-flex items-center justify-center w-full max-w-xs px-6 py-4 bg-brand text-white font-semibold text-lg rounded-xl shadow-lg hover:bg-brand-dark hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-brand/30 active:translate-y-0">
+                <i class="fa-solid fa-arrow-left mr-2"></i>
+                Retour à l'accueil
+            </a>
+            
+            <a href="#" class="mt-6 text-sm font-medium text-brand hover:text-brand-dark underline decoration-brand/30 underline-offset-4 transition-colors">
+                Besoin d'aide ? Contactez-nous
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full" style="background-color: #00497c;">
+        <div class="px-6 py-8 max-w-md mx-auto w-full flex flex-col items-center text-center">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-2 mb-5">
+                <div class="w-7 h-7 bg-white text-brand-dark flex items-center justify-center rounded font-bold text-sm">
+                    T
+                </div>
+                <span class="font-bold text-sm text-white">Trouve ton artisan&nbsp;!</span>
+            </div>
+
+            <!-- Legal Links -->
+            <nav class="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-6" aria-label="Liens légaux">
+                <a href="#" class="text-xs text-white/80 hover:text-white transition-colors underline-offset-2 hover:underline">Mentions légales</a>
+                <a href="#" class="text-xs text-white/80 hover:text-white transition-colors underline-offset-2 hover:underline">Données personnelles</a>
+                <a href="#" class="text-xs text-white/80 hover:text-white transition-colors underline-offset-2 hover:underline">Accessibilité</a>
+                <a href="#" class="text-xs text-white/80 hover:text-white transition-colors underline-offset-2 hover:underline">Cookies</a>
+            </nav>
+
+            <!-- Address -->
+            <address class="not-italic text-xs text-white/70 leading-relaxed mb-5">
+                101 cours Charlemagne, CS 20033<br>
+                69269 LYON CEDEX 02, France<br>
+                <a href="tel:+33426734000" class="hover:text-white transition-colors mt-1 inline-block">+33 (0)4 26 73 40 00</a>
+            </address>
+
+            <!-- Copyright -->
+            <p class="text-xs text-white/60">
+                &copy; 2024 Région Auvergne-Rhône-Alpes
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

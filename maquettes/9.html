@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Graphik', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0074c7',
+                            darkblue: '#00497c',
+                            text: '#384050',
+                            lightbg: '#f1f8fc',
+                            red: '#cd2c2e',
+                            green: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { margin: 0; padding: 0; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-[#f1f8fc] text-brand-text font-sans antialiased m-0 p-0">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex-shrink-0 flex items-center">
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold group-hover:bg-brand-darkblue transition-colors">
+                        T
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-brand-darkblue">Trouve ton artisan !</span>
+                </a>
+            </div>
+            <div class="flex items-center">
+                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-brand-text hover:text-brand-blue hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-blue min-h-[44px] min-w-[44px]" aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl w-full bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 overflow-hidden">
+            <div class="p-8 sm:p-12 text-center">
+                <div class="mx-auto w-16 h-16 bg-brand-lightbg rounded-full flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-scale-balanced text-2xl text-brand-blue"></i>
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-bold text-brand-darkblue mb-4 tracking-tight">
+                    Mentions légales
+                </h1>
+                <div class="w-12 h-1 bg-brand-blue rounded-full mx-auto mb-8"></div>
+                <div class="prose prose-blue mx-auto text-brand-text">
+                    <p class="text-lg sm:text-xl font-medium leading-relaxed bg-gray-50 p-6 rounded-xl border border-gray-100">
+                        <i class="fa-solid fa-person-digging text-brand-blue mr-2"></i>
+                        Page en construction. <br class="hidden sm:block" />
+                        <span class="text-gray-500 font-normal mt-2 block sm:inline">Ce contenu sera bientôt disponible.</span>
+                    </p>
+                </div>
+                <div class="mt-10">
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-gray-200 shadow-sm text-base font-medium rounded-xl text-brand-text bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue transition-all duration-200 min-h-[44px] min-w-[44px]">
+                        <i class="fa-solid fa-arrow-left mr-2"></i>
+                        Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-brand-darkblue text-white mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+
+                <!-- Left: Contact & Address -->
+                <div class="space-y-3">
+                    <a href="#" class="flex items-center justify-center md:justify-start gap-2 mb-4">
+                        <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-brand-darkblue font-bold text-sm">
+                            T
+                        </div>
+                        <span class="font-bold text-xl tracking-tight">Trouve ton artisan !</span>
+                    </a>
+                    <div class="text-blue-200 text-sm space-y-1">
+                        <p class="flex items-start justify-center md:justify-start gap-2">
+                            <i class="fa-solid fa-location-dot mt-0.5 text-blue-300 flex-shrink-0"></i>
+                            <span>101 cours Charlemagne, CS 20033<br>69269 LYON CEDEX 02, France</span>
+                        </p>
+                        <p class="flex items-center justify-center md:justify-start gap-2">
+                            <i class="fa-solid fa-phone text-blue-300 flex-shrink-0"></i>
+                            <a href="tel:+33426734000" class="hover:text-white transition-colors">+33 (0)4 26 73 40 00</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right: Legal Links -->
+                <div class="space-y-3">
+                    <h3 class="font-semibold text-lg">Informations légales</h3>
+                    <ul class="space-y-1 text-sm text-blue-200">
+                        <li><a href="#" class="text-white font-medium min-h-[44px] inline-flex items-center hover:underline">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors min-h-[44px] inline-flex items-center">Données personnelles</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors min-h-[44px] inline-flex items-center">Accessibilité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors min-h-[44px] inline-flex items-center">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-blue-800 mt-8 pt-6 text-center text-sm text-blue-300">
+                <p>&copy; 2024 Région Auvergne-Rhône-Alpes</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

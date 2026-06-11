@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page non trouvée</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Graphik', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f1f8fc',
+                            DEFAULT: '#0074c7',
+                            dark: '#00497c',
+                            text: '#384050',
+                            error: '#cd2c2e',
+                            success: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Graphik', 'Inter', sans-serif; }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="m-0 p-0 flex flex-col bg-white text-brand-text antialiased">
+
+    <!-- Header -->
+    <header id="header" class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 text-brand font-bold text-2xl tracking-tight">
+                <i class="fa-solid fa-hammer text-brand"></i>
+                Trouve ton artisan&nbsp;!
+            </a>
+            <div class="flex items-center gap-6">
+                <nav class="hidden md:flex items-center gap-6 font-medium text-sm text-gray-600">
+                    <a href="#" class="hover:text-brand transition-colors">Trouver un artisan</a>
+                    <a href="#" class="hover:text-brand transition-colors">Nos services</a>
+                    <a href="#" class="hover:text-brand transition-colors">Comment ça marche</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hidden md:inline-flex items-center justify-center h-11 px-5 rounded-lg text-brand font-medium hover:bg-brand-light transition-colors">
+                        Connexion
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center h-11 px-6 rounded-lg bg-brand text-white font-medium hover:bg-brand-dark transition-colors shadow-sm">
+                        S'inscrire
+                    </a>
+                    <button class="md:hidden flex items-center justify-center w-11 h-11 text-gray-600 rounded-lg hover:bg-gray-100">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-404" class="flex-grow flex items-center justify-center w-full px-6 py-16 md:py-24">
+        <div class="w-full max-w-2xl mx-auto flex flex-col items-center text-center space-y-8">
+
+            <!-- Illustration -->
+            <div class="w-full max-w-sm md:max-w-md h-64 md:h-80 overflow-hidden relative">
+                <img class="w-full h-full object-contain" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_bc7fdaa6f9_6dd6d140dd181c27.png" alt="modern 3d illustration of a lost construction worker character looking at a map, minimalist, clean, " />
+            </div>
+
+            <!-- Error Content -->
+            <div class="space-y-4 max-w-lg">
+                <h1 class="text-6xl md:text-8xl font-bold text-brand tracking-tighter">
+                    404
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-900">
+                    Page non trouvée
+                </h2>
+                <p class="text-lg text-gray-500 leading-relaxed md:px-8">
+                    La page que vous avez demandée n'existe pas ou a été déplacée. Vérifiez l'URL ou retournez à l'accueil pour continuer votre recherche.
+                </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="pt-4 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+                <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center h-14 px-8 rounded-xl bg-brand text-white font-medium text-lg hover:bg-brand-dark transition-all duration-200 shadow-[0_4px_14px_0_rgba(0,116,199,0.39)] hover:shadow-[0_6px_20px_rgba(0,116,199,0.23)] hover:-translate-y-0.5">
+                    <i class="fa-solid fa-house mr-2.5"></i>
+                    Retour à l'accueil
+                </a>
+                <a href="#" class="w-full sm:w-auto inline-flex items-center justify-center h-14 px-8 rounded-xl bg-white text-gray-700 font-medium text-lg border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200">
+                    <i class="fa-solid fa-magnifying-glass mr-2.5"></i>
+                    Chercher un artisan
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full text-white py-12 md:py-14" style="background-color: #00497c;">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-8">
+
+                <!-- Left Column -->
+                <div class="space-y-3">
+                    <a href="#" class="flex items-center gap-2 text-white font-bold text-xl tracking-tight">
+                        <i class="fa-solid fa-hammer"></i>
+                        Trouve ton artisan&nbsp;!
+                    </a>
+                    <div class="text-sm text-blue-100 leading-relaxed space-y-1 pt-1">
+                        <p>101 cours Charlemagne</p>
+                        <p>CS 20033</p>
+                        <p>69269 LYON CEDEX 02, France</p>
+                        <p class="pt-1 flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-xs"></i>
+                            +33 (0)4 26 73 40 00
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="md:flex md:flex-col md:items-end">
+                    <div>
+                        <h3 class="font-semibold text-white mb-4 text-sm uppercase tracking-wider">Informations légales</h3>
+                        <ul class="space-y-3 text-sm text-blue-100">
+                            <li><a href="#" class="hover:text-white transition-colors">Mentions légales</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Données personnelles</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Accessibilité</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-blue-400 border-opacity-40 mt-10 pt-8 text-sm text-blue-100 text-center md:text-left">
+                <p>&copy; 2024 Région Auvergne-Rhône-Alpes</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0074c7',
+                        'primary-dark': '#00497c',
+                        neutral: '#384050',
+                        light: '#f1f8fc',
+                        accent: '#cd2c2e',
+                        success: '#82b864'
+                    },
+                    fontFamily: {
+                        sans: ['Graphik', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="m-0 p-0 text-neutral bg-white">
+
+    <!-- Header (Sticky) -->
+    <header id="header" class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex flex-col">
+                <a href="#" class="text-2xl font-bold text-primary-dark">Trouve ton artisan !</a>
+                <span class="text-xs text-gray-500 mt-0.5">Avec la région Auvergne-Rhône-Alpes</span>
+            </div>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-neutral font-medium hover:text-primary transition-colors">Bâtiment</a>
+                <a href="#" class="text-neutral font-medium hover:text-primary transition-colors">Services</a>
+                <a href="#" class="text-neutral font-medium hover:text-primary transition-colors">Fabrication</a>
+                <a href="#" class="text-neutral font-medium hover:text-primary transition-colors">Alimentation</a>
+            </nav>
+            <div class="hidden md:flex relative w-64">
+                <input type="text" placeholder="Rechercher un artisan..." class="w-full pl-10 pr-4 py-2.5 rounded-full bg-light border-none focus:ring-2 focus:ring-primary text-sm outline-none placeholder-gray-400">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-light py-24 md:py-32">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_c738bd3aaf_0a45e359821d2ef3.png" alt="subtle artisan tools pattern background, minimalist line art, blueprint style" />
+        </div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-primary-dark mb-6 leading-tight">
+                Trouvez le meilleur artisan <br>près de chez vous
+            </h1>
+            <p class="text-lg md:text-xl text-neutral mb-12 max-w-2xl mx-auto">
+                Découvrez des professionnels qualifiés en Auvergne-Rhône-Alpes pour tous vos projets de construction, rénovation et services du quotidien.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#" class="px-6 py-3 rounded-full bg-primary text-white font-medium hover:bg-primary-dark transition-colors shadow-md">Tous les métiers</a>
+                <a href="#" class="px-6 py-3 rounded-full bg-white text-neutral border border-gray-200 font-medium hover:border-primary hover:text-primary transition-colors shadow-sm">Bâtiment</a>
+                <a href="#" class="px-6 py-3 rounded-full bg-white text-neutral border border-gray-200 font-medium hover:border-primary hover:text-primary transition-colors shadow-sm">Services</a>
+                <a href="#" class="px-6 py-3 rounded-full bg-white text-neutral border border-gray-200 font-medium hover:border-primary hover:text-primary transition-colors shadow-sm">Fabrication</a>
+                <a href="#" class="px-6 py-3 rounded-full bg-white text-neutral border border-gray-200 font-medium hover:border-primary hover:text-primary transition-colors shadow-sm">Alimentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Comment trouver mon artisan ?</h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+            <div class="relative">
+                <div class="hidden lg:block absolute top-12 left-[10%] right-[10%] h-0.5 bg-gray-200 z-0"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 relative z-10">
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-light flex items-center justify-center text-primary text-3xl mb-6 shadow-sm border-4 border-white relative">
+                            <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center">1</span>
+                            <i class="fa-solid fa-list-ul"></i>
+                        </div>
+                        <p class="text-neutral font-medium leading-relaxed">Choisir la catégorie d'artisanat dans le menu.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-light flex items-center justify-center text-primary text-3xl mb-6 shadow-sm border-4 border-white relative">
+                            <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center">2</span>
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <p class="text-neutral font-medium leading-relaxed">Choisir un artisan.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-light flex items-center justify-center text-primary text-3xl mb-6 shadow-sm border-4 border-white relative">
+                            <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center">3</span>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <p class="text-neutral font-medium leading-relaxed">Le contacter via le formulaire de contact.</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-24 h-24 rounded-full bg-light flex items-center justify-center text-primary text-3xl mb-6 shadow-sm border-4 border-white relative">
+                            <span class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-accent text-white text-sm font-bold flex items-center justify-center">4</span>
+                            <i class="fa-solid fa-check-double text-success"></i>
+                        </div>
+                        <p class="text-neutral font-medium leading-relaxed">Une réponse sera apportée sous 48h.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artisans of the Month -->
+    <section id="artisans-du-mois" class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Artisans du mois</h2>
+                    <div class="w-20 h-1 bg-accent rounded-full"></div>
+                </div>
+                <div class="hidden md:flex gap-2">
+                    <button class="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white hover:border-primary transition-all"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-primary-dark transition-all"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_bb147dd482_0818e65d31689ace.png" alt="professional carpenter working with wood in workshop, bright lighting" />
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">Bâtiment</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-2 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-500 ml-1">(48)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-1">Jean Dupont</h3>
+                        <p class="text-accent font-medium mb-4">Menuisier Ébéniste</p>
+                        <div class="flex items-center text-gray-500 text-sm mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-gray-400"></i>
+                            <span>Lyon (69000)</span>
+                        </div>
+                        <a href="#" class="block w-full text-center py-3 rounded-lg border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors">Voir le profil</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_894ed8ff80_b38c1c51720fc2b7.png" alt="artisan baker taking fresh bread out of oven, warm bakery atmosphere" />
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">Alimentation</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-2 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-500 ml-1">(124)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-1">Marie Martin</h3>
+                        <p class="text-accent font-medium mb-4">Boulangère Pâtissière</p>
+                        <div class="flex items-center text-gray-500 text-sm mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-gray-400"></i>
+                            <span>Annecy (74000)</span>
+                        </div>
+                        <a href="#" class="block w-full text-center py-3 rounded-lg border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors">Voir le profil</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_a3a94333a9_b89dd9bdd2fe3588.png" alt="plumber fixing pipes under sink, professional uniform, bright tools" />
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm">Services</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-1 text-yellow-400 mb-2 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-gray-500 ml-1">(89)</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-dark mb-1">Lucas Bernard</h3>
+                        <p class="text-accent font-medium mb-4">Plombier Chauffagiste</p>
+                        <div class="flex items-center text-gray-500 text-sm mb-6">
+                            <i class="fa-solid fa-location-dot w-5 text-gray-400"></i>
+                            <span>Grenoble (38000)</span>
+                        </div>
+                        <a href="#" class="block w-full text-center py-3 rounded-lg border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-colors">Voir le profil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-primary-dark text-white pt-16 pb-8 border-t-[6px] border-accent">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-white/10 pb-12">
+                <div>
+                    <a href="#" class="text-3xl font-bold text-white mb-4 block">Trouve ton artisan !</a>
+                    <p class="text-blue-100 text-sm leading-relaxed max-w-sm">
+                        La plateforme officielle de la région Auvergne-Rhône-Alpes pour connecter les citoyens avec les meilleurs artisans locaux certifiés.
+                    </p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Contact & Accès</h4>
+                    <ul class="space-y-4 text-blue-100 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
+                            <span>101 cours Charlemagne, CS 20033<br>69269 LYON CEDEX 02, France</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <span>+33 (0)4 26 73 40 00</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary"></i>
+                            <a href="#" class="hover:text-white transition-colors">contact@trouvetonartisan.fr</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 text-white">Informations Légales</h4>
+                    <ul class="space-y-3 text-blue-100 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Conditions générales d'utilisation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Gestion des cookies</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Accessibilité : non conforme</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-center items-center text-sm text-blue-200">
+                <p>© 2024 Région Auvergne-Rhône-Alpes</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

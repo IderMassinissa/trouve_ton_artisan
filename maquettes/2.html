@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" class="font-inter">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0074c7',
+                            darkBlue: '#00497c',
+                            slate: '#384050',
+                            lightBlue: '#f1f8fc',
+                            red: '#cd2c2e',
+                            green: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>::-webkit-scrollbar { display: none; } body { margin: 0; padding: 0; background-color: #ffffff; color: #384050; }</style>
+</head>
+<body class="m-0 p-0 antialiased bg-white text-brand-slate flex flex-col">
+
+    <!-- Header -->
+    <header id="header" class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm px-6 py-4">
+        <div class="max-w-4xl mx-auto w-full flex flex-col gap-4">
+            <!-- Logo & Nav Row -->
+            <div class="flex justify-between items-center w-full">
+                <a href="#" class="flex items-center gap-2 text-brand-darkBlue font-bold text-xl tracking-tight">
+                    <i class="fa-solid fa-hammer text-brand-blue"></i>
+                    Trouve ton artisan !
+                </a>
+                <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a href="#" class="text-brand-slate hover:text-brand-blue transition-colors">Bâtiment</a>
+                    <a href="#" class="text-brand-slate hover:text-brand-blue transition-colors">Services</a>
+                    <a href="#" class="text-brand-slate hover:text-brand-blue transition-colors">Fabrication</a>
+                    <a href="#" class="text-brand-slate hover:text-brand-blue transition-colors">Alimentation</a>
+                </nav>
+                <button class="md:hidden text-brand-slate p-2 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Full width Search Bar -->
+            <div class="w-full relative flex items-center">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                </div>
+                <input type="text" placeholder="Rechercher un artisan, une ville..."
+                    class="block w-full pl-11 pr-4 py-3.5 border border-gray-200 rounded-xl bg-gray-50 focus:ring-2 focus:ring-brand-blue focus:border-transparent focus:bg-white transition-all text-sm h-[48px] outline-none placeholder-gray-400">
+                <button class="absolute inset-y-1.5 right-1.5 bg-brand-blue hover:bg-brand-darkBlue text-white px-4 rounded-lg text-sm font-medium transition-colors h-[36px]">
+                    Rechercher
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col w-full max-w-4xl mx-auto">
+
+        <!-- Hero Section -->
+        <section id="hero" class="px-6 py-12 md:py-16 flex flex-col items-center text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-darkBlue mb-4 leading-tight max-w-3xl">
+                Trouvez facilement <br/><span class="text-brand-blue">votre artisan local</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-500 max-w-2xl mb-10 leading-relaxed">
+                Connectez-vous avec les meilleurs professionnels de votre région pour tous vos projets de bâtiment, services, fabrication et alimentation.
+            </p>
+            <!-- Categories Pills -->
+            <div class="w-full flex justify-center flex-wrap gap-3">
+                <button class="px-6 py-2.5 rounded-full bg-brand-darkBlue text-white font-medium text-sm hover:bg-brand-blue transition-colors shadow-sm whitespace-nowrap min-h-[44px]">Tous les métiers</button>
+                <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-brand-slate hover:border-brand-blue hover:text-brand-blue font-medium text-sm transition-colors shadow-sm whitespace-nowrap min-h-[44px]">Bâtiment</button>
+                <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-brand-slate hover:border-brand-blue hover:text-brand-blue font-medium text-sm transition-colors shadow-sm whitespace-nowrap min-h-[44px]">Services</button>
+                <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-brand-slate hover:border-brand-blue hover:text-brand-blue font-medium text-sm transition-colors shadow-sm whitespace-nowrap min-h-[44px]">Fabrication</button>
+                <button class="px-6 py-2.5 rounded-full bg-white border border-gray-200 text-brand-slate hover:border-brand-blue hover:text-brand-blue font-medium text-sm transition-colors shadow-sm whitespace-nowrap min-h-[44px]">Alimentation</button>
+            </div>
+        </section>
+
+        <!-- How to find -->
+        <section id="how-it-works" class="px-6 py-12 bg-brand-lightBlue rounded-3xl mx-6 mb-16">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl md:text-3xl font-bold text-brand-darkBlue mb-10 text-center">
+                    Comment trouver mon artisan ?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-xl shrink-0">1</div>
+                        <div><p class="font-medium text-brand-slate leading-snug mt-1">Choisir la catégorie d'artisanat dans le menu.</p></div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-xl shrink-0">2</div>
+                        <div><p class="font-medium text-brand-slate leading-snug mt-1">Choisir un artisan.</p></div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-xl shrink-0">3</div>
+                        <div><p class="font-medium text-brand-slate leading-snug mt-1">Le contacter via le formulaire de contact.</p></div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center font-bold text-xl shrink-0">4</div>
+                        <div><p class="font-medium text-brand-slate leading-snug mt-1">Une réponse sera apportée sous 48h.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artisans of the Month -->
+        <section id="artisans-month" class="px-6 py-12 mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold text-brand-darkBlue mb-10 text-center">
+                Artisans du mois
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_bb147dd482_6d82b1f7577fce37.png" alt="professional carpenter working in workshop" />
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="text-xs font-semibold text-brand-blue uppercase tracking-wider mb-1">Menuisier</div>
+                        <h3 class="font-bold text-lg text-brand-darkBlue mb-2">Atelier Dubois</h3>
+                        <!-- 5-star rating -->
+                        <div class="flex items-center gap-0.5 mb-3">
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-gray-400 ml-1.5 font-medium">4.9/5</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-gray-500 text-sm mb-4">
+                            <i class="fa-solid fa-location-dot text-brand-blue"></i> Lyon
+                        </div>
+                        <button class="mt-auto w-full py-2.5 rounded-xl border border-gray-200 text-brand-darkBlue font-medium text-sm hover:bg-gray-50 transition-colors min-h-[44px]">
+                            Voir le profil
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_a65170c93e_8b6b8933abbe36a4.png" alt="artisan baker working with fresh dough in a modern bakery" />
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="text-xs font-semibold text-brand-red uppercase tracking-wider mb-1">Boulanger</div>
+                        <h3 class="font-bold text-lg text-brand-darkBlue mb-2">Le Pain Doré</h3>
+                        <!-- 5-star rating -->
+                        <div class="flex items-center gap-0.5 mb-3">
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star-half-stroke text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-gray-400 ml-1.5 font-medium">4.8/5</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-gray-500 text-sm mb-4">
+                            <i class="fa-solid fa-location-dot text-brand-blue"></i> Grenoble
+                        </div>
+                        <button class="mt-auto w-full py-2.5 rounded-xl border border-gray-200 text-brand-darkBlue font-medium text-sm hover:bg-gray-50 transition-colors min-h-[44px]">
+                            Voir le profil
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow group flex flex-col h-full">
+                    <div class="h-48 bg-gray-100 relative overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_eeeea099a6_d4326384521b1691.png" alt="electrician fixing wiring in a modern home" />
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <div class="text-xs font-semibold text-brand-green uppercase tracking-wider mb-1">Électricien</div>
+                        <h3 class="font-bold text-lg text-brand-darkBlue mb-2">Volt Services</h3>
+                        <!-- 5-star rating -->
+                        <div class="flex items-center gap-0.5 mb-3">
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <i class="fa-solid fa-star text-yellow-400 text-sm"></i>
+                            <span class="text-xs text-gray-400 ml-1.5 font-medium">5.0/5</span>
+                        </div>
+                        <div class="flex items-center gap-1.5 text-gray-500 text-sm mb-4">
+                            <i class="fa-solid fa-location-dot text-brand-blue"></i> Clermont-Ferrand
+                        </div>
+                        <button class="mt-auto w-full py-2.5 rounded-xl border border-gray-200 text-brand-darkBlue font-medium text-sm hover:bg-gray-50 transition-colors min-h-[44px]">
+                            Voir le profil
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-brand-darkBlue text-white mt-auto">
+        <div class="max-w-4xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Left: Contact -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-hammer text-brand-blue"></i>
+                        Trouve ton artisan !
+                    </h4>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-blue"></i>
+                            <span>101 cours Charlemagne<br>CS 20033<br>69269 LYON CEDEX 02<br>France</span>
+                        </li>
+                        <li class="flex items-center gap-3 mt-4">
+                            <i class="fa-solid fa-phone text-brand-blue"></i>
+                            <a href="tel:+33426734000" class="hover:text-white transition-colors">+33 (0)4 26 73 40 00</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right: Legal -->
+                <div class="md:text-right flex flex-col md:items-end">
+                    <h4 class="text-lg font-bold mb-6">Informations légales</h4>
+                    <ul class="space-y-3 text-gray-300 flex flex-col md:items-end">
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Données personnelles</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Accessibilité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors hover:underline">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-10 pt-6 text-center text-sm text-gray-400">
+                &copy; 2024 Région Auvergne-Rhône-Alpes
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

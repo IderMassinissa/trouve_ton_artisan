@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Artisan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Graphik', 'Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#f1f8fc',
+                            primary: '#0074c7',
+                            dark: '#00497c',
+                            text: '#384050',
+                            danger: '#cd2c2e',
+                            success: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #f8fafc;
+        }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="text-brand-text flex flex-col min-h-[100dvh]">
+
+    <!-- Header -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2 text-brand-primary">
+                        <i class="fa-solid fa-hammer text-2xl"></i>
+                        <span class="font-bold text-xl tracking-tight">Trouve ton artisan !</span>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-brand-text hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Accueil</a>
+                    <a href="#" class="text-brand-text hover:text-brand-primary px-3 py-2 text-sm font-medium transition-colors">Recherche</a>
+                    <a href="#" class="text-brand-primary font-semibold px-3 py-2 text-sm transition-colors border-b-2 border-brand-primary">Artisans</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-brand-text hover:text-brand-primary text-sm font-medium transition-colors">Connexion</a>
+                    <a href="#" class="bg-brand-primary text-white hover:bg-brand-dark px-4 py-2 rounded-md text-sm font-medium transition-colors">Inscription Pro</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="text-brand-text hover:text-brand-primary focus:outline-none p-2 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-7xl mx-auto pb-12">
+        
+        <!-- Hero Image -->
+        <section id="artisan-hero" class="w-full">
+            <div class="h-[250px] w-full relative overflow-hidden bg-brand-dark">
+                <img class="w-full h-full object-cover opacity-80" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_bb147dd482_6cd2caad764a275a.png" alt="professional carpenter working with wood in an artisan workshop" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+        </section>
+
+        <!-- Profile Content Grid -->
+        <section id="artisan-profile" class="px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
+            <div class="flex flex-col md:flex-row gap-8">
+                
+                <!-- Left Column: Details -->
+                <div class="w-full md:w-7/12 flex flex-col gap-6">
+                    <!-- Profile Card -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h1 class="text-3xl font-bold text-gray-900 mb-2">Menuiserie Dubois & Fils</h1>
+                                <div class="flex items-center gap-2 mb-3">
+                                    <span class="bg-brand-light text-brand-primary px-3 py-1 rounded-full text-sm font-medium">Menuisier Agenceur</span>
+                                    <span class="flex items-center text-yellow-400 text-sm">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <span class="text-gray-500 ml-1 text-sm">(48 avis)</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="h-20 w-20 rounded-full overflow-hidden border-4 border-white shadow-md flex-shrink-0 hidden sm:block">
+                                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0122203133_4cc70501f18168ab.png" alt="portrait of a friendly mature french carpenter artisan" />
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-sm text-gray-600 mb-6">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-location-dot text-brand-primary w-5 text-center"></i>
+                                <span>15 Rue des Artisans, 69002 Lyon, France</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-phone text-brand-primary w-5 text-center"></i>
+                                <span>04 78 12 34 56</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-globe text-brand-primary w-5 text-center"></i>
+                                <a href="#" class="text-brand-primary hover:underline font-medium">www.menuiseriedubois.fr</a>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-check-circle text-brand-success w-5 text-center"></i>
+                                <span class="text-brand-success font-medium">Artisan Certifié RGE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Section -->
+                    <div class="bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100">
+                        <h2 class="text-xl font-bold text-gray-900 mb-4 border-b border-gray-100 pb-3">À propos</h2>
+                        <div class="prose prose-sm text-gray-600 space-y-4">
+                            <p>Fort de plus de 20 ans d'expérience, la Menuiserie Dubois & Fils est spécialisée dans la création sur mesure d'aménagements intérieurs et extérieurs en bois.</p>
+                            <p>Nous concevons et réalisons des dressings, bibliothèques, cuisines personnalisées, ainsi que la pose de fenêtres et portes avec un souci constant du détail et de la qualité des finitions.</p>
+                            <p>Notre engagement : allier le savoir-faire traditionnel de l'artisanat français aux techniques modernes pour donner vie à vos projets, tout en respectant les normes environnementales (certifié RGE).</p>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-100">
+                            <h3 class="text-sm font-semibold text-gray-900 mb-3">Prestations principales</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-md text-xs font-medium border border-gray-200">Agencement d'intérieur</span>
+                                <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-md text-xs font-medium border border-gray-200">Meubles sur mesure</span>
+                                <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-md text-xs font-medium border border-gray-200">Pose de fenêtres</span>
+                                <span class="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-md text-xs font-medium border border-gray-200">Escaliers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="w-full md:w-5/12">
+                    <div class="bg-white rounded-xl shadow-sm p-6 sm:p-8 border border-gray-100 sticky top-24">
+                        <h2 class="text-xl font-bold text-gray-900 mb-2">Contacter cet artisan</h2>
+                        <p class="text-sm text-gray-500 mb-6">Demandez un devis gratuit ou posez vos questions.</p>
+                        
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors min-h-[44px]" placeholder="Votre nom" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors min-h-[44px]" placeholder="votre@email.com" required>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Objet</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors bg-white min-h-[44px]">
+                                    <option value="">Sélectionnez un objet</option>
+                                    <option value="devis">Demande de devis</option>
+                                    <option value="info">Demande d'information</option>
+                                    <option value="rdv">Prendre rendez-vous</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors resize-y" placeholder="Décrivez votre projet ou posez votre question..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-brand-primary hover:bg-brand-dark text-white font-medium py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2 min-h-[44px] shadow-sm">
+                                <span>Envoyer le message</span>
+                                <i class="fa-solid fa-paper-plane text-sm"></i>
+                            </button>
+                            
+                            <p class="text-xs text-center text-gray-400 mt-4">
+                                En envoyant ce message, vous acceptez nos <a href="#" class="underline hover:text-gray-600">conditions générales</a>.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-brand-text text-gray-300 pt-12 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 border-b border-gray-700 pb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="flex items-center gap-2 text-white mb-4">
+                        <i class="fa-solid fa-hammer text-xl text-brand-primary"></i>
+                        <span class="font-bold text-lg tracking-tight">Trouve ton artisan !</span>
+                    </a>
+                    <p class="text-sm text-gray-400 mb-4">
+                        La plateforme de référence pour trouver les meilleurs artisans de votre région. Qualité, confiance et proximité.
+                    </p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Trouver un artisan</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Plombiers</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Électriciens</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Menuisiers</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Maçons</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Pour les artisans</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">S'inscrire comme Pro</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Comment ça marche ?</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Tarifs</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition-colors min-h-[44px] flex items-center">Espace Pro</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-envelope mt-1 text-gray-400"></i>
+                            <a href="mailto:contact@trouvetonartisan.fr" class="hover:text-brand-primary transition-colors">contact@trouvetonartisan.fr</a>
+                        </li>
+                        <li class="flex items-start gap-2 mt-2">
+                            <i class="fa-solid fa-phone mt-1 text-gray-400"></i>
+                            <span>01 23 45 67 89</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2024 Trouve ton artisan !. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition-colors">CGU</a>
+                    <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr" class="m-0 p-0 antialiased font-sans bg-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#0074c7',
+                            darkBlue: '#00497c',
+                            text: '#384050',
+                            light: '#f1f8fc',
+                            red: '#cd2c2e',
+                            green: '#82b864'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="m-0 p-0 text-brand-text flex flex-col bg-white">
+
+    <!-- Header -->
+    <header id="header" class="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                    <i class="fa-solid fa-hammer"></i>
+                </div>
+                <span class="text-2xl font-bold text-brand-darkBlue tracking-tight">Trouve ton artisan !</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="text-brand-text hover:text-brand-blue font-medium transition-colors">Trouver un artisan</a>
+                <a href="#" class="text-brand-text hover:text-brand-blue font-medium transition-colors">Comment ça marche</a>
+                <a href="#" class="text-brand-text hover:text-brand-blue font-medium transition-colors">Avis</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="text-brand-blue font-medium hover:text-brand-darkBlue transition-colors">Connexion</a>
+                <a href="#" class="bg-brand-blue text-white px-5 py-2.5 rounded-lg font-medium hover:bg-brand-darkBlue transition-colors shadow-sm">Inscription pro</a>
+            </div>
+            <button class="md:hidden text-brand-text p-2">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="flex-grow w-full py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto w-full">
+
+            <div class="mb-10 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">Mentions légales</h1>
+                <p class="text-lg text-gray-500">Dernière mise à jour : Février 2024</p>
+            </div>
+
+            <div class="bg-brand-light border-l-4 border-brand-blue p-6 rounded-r-xl mb-12 shadow-sm">
+                <div class="flex gap-4">
+                    <div class="text-brand-blue text-xl mt-0.5">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-brand-darkBlue mb-2">Informations juridiques</h3>
+                        <p class="text-brand-text leading-relaxed">Cette page explique nos conditions d'utilisation et nos mentions légales. En utilisant Trouve ton artisan !, vous acceptez les règles décrites ci-dessous.</p>
+                    </div>
+                </div>
+            </div>
+
+            <section id="content-card" class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-8 md:p-12">
+                <div class="flex flex-col items-center justify-center py-16 text-center space-y-6">
+                    <div class="w-20 h-20 bg-brand-light rounded-full flex items-center justify-center text-brand-blue text-3xl mb-2">
+                        <i class="fa-solid fa-person-digging"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-brand-darkBlue">Page en construction</h2>
+                    <p class="text-lg text-gray-600 max-w-md mx-auto leading-relaxed">
+                        Ce contenu sera bientôt disponible. Nos équipes juridiques travaillent actuellement sur la rédaction de ces documents pour assurer une transparence totale.
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-brand-blue font-medium hover:text-brand-darkBlue transition-colors mt-4">
+                        <i class="fa-solid fa-arrow-left"></i> Retour à l'accueil
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full text-white py-14" style="background-color:#00497c;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+
+                <!-- Col 1 — Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 bg-white rounded flex items-center justify-center" style="color:#00497c;">
+                            <i class="fa-solid fa-hammer text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold tracking-tight">Trouve ton artisan !</span>
+                    </div>
+                    <p class="text-blue-100 text-sm leading-relaxed">
+                        La plateforme de référence pour trouver les meilleurs artisans qualifiés près de chez vous.
+                    </p>
+                </div>
+
+                <!-- Col 2 — Address -->
+                <div>
+                    <h4 class="text-base font-semibold mb-4 text-white">Contact</h4>
+                    <address class="not-italic text-blue-100 text-sm leading-relaxed space-y-1">
+                        <p>101 cours Charlemagne</p>
+                        <p>CS 20033</p>
+                        <p>69269 LYON CEDEX 02</p>
+                        <p>France</p>
+                        <p class="mt-3">
+                            <a href="tel:+33426734000" class="hover:text-white transition-colors">+33 (0)4 26 73 40 00</a>
+                        </p>
+                    </address>
+                </div>
+
+                <!-- Col 3 — Legal Links -->
+                <div>
+                    <h4 class="text-base font-semibold mb-4 text-white">Informations légales</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white font-medium text-sm hover:underline">Mentions légales</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-colors text-sm">Données personnelles</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-colors text-sm">Accessibilité</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white transition-colors text-sm">Cookies</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-white/20 pt-8">
+                <p class="text-blue-100 text-sm text-center md:text-left">© 2024 Région Auvergne-Rhône-Alpes</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
